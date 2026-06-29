@@ -1,0 +1,6 @@
+- name: demo vars from  cmd
+  hosts: frontend
+  tasks:
+  - name: print name
+    debug:
+      msg: "Hello {{ name }}"
