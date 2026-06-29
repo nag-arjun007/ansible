@@ -1,0 +1,10 @@
+- name: demo on task level variable
+  hosts: localhost
+  connection: local
+  become: yes
+  vars_files:
+  - course.yaml
+  tasks:
+  - name: print variable info
+    debug:
+      msg: "Hi, I am learning {{ COURSE }}, Trainer is {{ TRAINER }}, Duration is {{ DURATION }}"   
