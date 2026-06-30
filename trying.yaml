@@ -1,0 +1,14 @@
+- name: practing ansible playbook
+  hosts: local
+  connection: local
+  vars:
+   # given_number: 7
+    course: ansible
+  vars_prompt:
+    - name: given_number
+      prompt: "please enter number"
+      private: false
+  tasks:
+  - name: print info
+    debug:
+      msg: "hi given no.of is: {{ given_number }}"
