@@ -9,20 +9,13 @@
       env: dev
     full_name: Arjun
     ip_address: 178.90.78.19
-      tagList: [
-        {
-          "key": "name",
-          "value": "Ansible"
-        },
-        {
-          "key": "project",
-          "value": "roboshop"
-        },
-        {
-          "key": "env",
-          "value": "dev"
-        }
-      ]
+    tagList:
+    - key: name
+      value: Ansible
+    - key: project
+      value: roboshop
+    - key: env
+      value: dev
   tasks:
   - name: convert string to list
     debug:
