@@ -1,0 +1,53 @@
+- name: demo on filters
+  hosts: local
+  connection: local
+  vars:
+    topics: Linux, shell, ansible, terraform
+    tagMap:
+      name: ansible
+      project: roboshop
+      env: dev
+    full_name: Arjun
+    ip_address: 178.90.78.19
+    tagList: [
+      {
+          "key": "name"
+          "value": "Ansible"
+      },
+      {
+          "key": "project"
+          "value": "roboshop"
+      },
+      {
+          "key": "env"
+          "value": "dev"
+      }
+    ]
+  tasks:
+  - name: convert string to list
+    debug:
+      msg: "Topics are: {{ topics | split(',') }}" 
+
+  - name: set default value
+    debug:
+      msg: "{{ GREETING | default('good morning') }}"
+
+  - name: convert map to list
+    debug:
+      msg: "{{ tagMap | dict2items }}"
+
+  - name: convert list to map
+    debug:
+      msg: "{{ tagList | item2dict }}"
+
+  - name: convert to uppercase
+    debug:
+      msg: "{{ full_name | upper }}"
+
+  - name: convert to lowercase
+    debug:
+      msg: "{{ full_name | lower }}"
+
+  - name: check ipv4 ip_address
+    debug:
+      msg: "{{ ip_address | ansible.utils.ipv4 }}" # this will check above ipv4 is correct or not                            
