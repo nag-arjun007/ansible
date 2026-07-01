@@ -1,0 +1,8 @@
+- name: demo on idempotency
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: create user
+    user:
+      name: expense # it is equally to useradd expense in linux
