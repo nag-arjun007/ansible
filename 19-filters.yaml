@@ -11,15 +11,15 @@
     ip_address: 178.90.78.19
       tagList: [
         {
-          "key": "name"
+          "key": "name",
           "value": "Ansible"
         },
         {
-          "key": "project"
+          "key": "project",
           "value": "roboshop"
         },
         {
-          "key": "env"
+          "key": "env",
           "value": "dev"
         }
       ]
