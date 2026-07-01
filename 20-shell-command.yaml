@@ -10,7 +10,7 @@
 
   - name: print output
     debug:
-      msg: "{{ user_output }}"
+      msg: "{{ users_output }}"
 
   - name: list files
     #command: ls -ltr > /tmp/files.txt
