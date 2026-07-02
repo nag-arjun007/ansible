@@ -6,8 +6,8 @@
     course: ansible
   vars_prompt:
   - name: given_number
-      prompt: "please enter number"
-      private: false
+    prompt: "please enter number"
+    private: false
   tasks:
   - name: print info
     debug:
